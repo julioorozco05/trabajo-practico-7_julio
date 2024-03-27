@@ -9,6 +9,7 @@ app = FastAPI(
 )
 
 model = joblib.load("model/logistic_regression_v01.pkl")
+print(model)
 
 
 @app.post("/api/v1/predict-regression-model", tags=["regression-model"])
