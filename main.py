@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 app = FastAPI(
-    title= "deploy regression model",
+    title= "predict linear regression model",
     version= "0.0.1"
 )
 
@@ -12,7 +12,7 @@ model = joblib.load("model/logistic_regression_v01.pkl")
 print(model)
 
 
-@app.post("/api/v1/predict-regression-model", tags=["regression-model"])
+@app.post("/api/v1/prediction-linear-regression", tags=["linear-regression"])
 async def predict(
         Pregnancies: float,
         Glucose: float,
